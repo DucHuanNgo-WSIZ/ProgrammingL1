@@ -1,23 +1,40 @@
-﻿using Microsoft.AspNetCore.Http;
+﻿using ReserverApi.DataAccess;
+using ReserverApi.Models;
+using ReserverApi.Models.Dto;
 using Microsoft.AspNetCore.Mvc;
 
 namespace ReserverApi.Controllers;
 
-[Route("[controller]")]
+[Route("Reservation")]
 [ApiController]
-public class SeatController : ControllerBase
+public class SeatController(SeatReservationDbContext dbContext) : ControllerBase
 {
     [HttpGet]
-    public IEnumerable<object> GetAll() => [
-        new { Id = 1, Location = "front", Class = "first", Price = 10.0 },
-        new { Id = 2, Location = "front", Class = "first", Price = 10.0 },
-        new { Id = 3, Location = "front", Class = "second", Price = 8.0 },
-        new { Id = 4, Location = "front", Class = "second", Price = 8.0 },
-        new { Id = 5, Location = "front", Class = "second", Price = 8.0 },
-        new { Id = 6, Location = "back", Class = "first", Price = 6.0 },
-        new { Id = 7, Location = "back", Class = "first", Price = 6.0 },
-        new { Id = 8, Location = "back", Class = "second", Price = 5.0 },
-        new { Id = 9, Location = "back", Class = "second", Price = 5.0 },
-        new { Id = 10, Location = "back", Class = "second", Price = 5.0 }
-    ];
+    public IActionResult MyReservations() 
+        => Ok(dbContext.Reservations.ToList());
+
+    [HttpPost]
+    public IActionResult NewReservation(NewReservationDto newReservation)
+    {
+        var reservation = new Reservation
+        {
+            Seat = dbContext.Seats.First(x => x.Id == newReservation.SeatId)
+        };
+
+        dbContext.Reservations.Add(reservation);
+        dbContext.SaveChanges();
+        return Ok();
+    }
+
+    [HttpDelete]
+    [Route("{reservationId}")]
+    public IActionResult DeleteReservation(int reservationId)
+    {
+        var reservationToDelete =
+            dbContext.Reservations.First(x => x.Id == reservationId);
+
+        dbContext.Reservations.Remove(reservationToDelete);
+        dbContext.SaveChanges();
+        return Ok();
+    }
 }

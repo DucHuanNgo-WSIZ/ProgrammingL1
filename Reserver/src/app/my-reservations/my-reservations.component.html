@@ -11,7 +11,7 @@
         <tr>
             <th scope="row">{{ i + 1 }}</th>
             <td>
-                {{ reservation.id }}
+                {{ reservation.seat.id }}
             </td>
             <td><button class="btn btn-danger" (click)="cancelReservation(reservation)">Cancel</button></td>
         </tr>

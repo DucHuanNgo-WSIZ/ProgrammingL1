@@ -33,3 +33,14 @@ C:\Users\Admin\source\repos\ProgrammingL1\ReserverApi\ReserverApi\obj\Debug\net9
 C:\Users\Admin\source\repos\ProgrammingL1\ReserverApi\ReserverApi\obj\Debug\net9.0\ReserverApi.pdb
 C:\Users\Admin\source\repos\ProgrammingL1\ReserverApi\ReserverApi\obj\Debug\net9.0\ReserverApi.genruntimeconfig.cache
 C:\Users\Admin\source\repos\ProgrammingL1\ReserverApi\ReserverApi\obj\Debug\net9.0\ref\ReserverApi.dll
+C:\Users\Admin\source\repos\ProgrammingL1\ReserverApi\ReserverApi\bin\Debug\net9.0\Microsoft.EntityFrameworkCore.dll
+C:\Users\Admin\source\repos\ProgrammingL1\ReserverApi\ReserverApi\bin\Debug\net9.0\Microsoft.EntityFrameworkCore.Abstractions.dll
+C:\Users\Admin\source\repos\ProgrammingL1\ReserverApi\ReserverApi\bin\Debug\net9.0\Microsoft.EntityFrameworkCore.InMemory.dll
+C:\Users\Admin\source\repos\ProgrammingL1\ReserverApi\ReserverApi\bin\Debug\net9.0\Microsoft.Extensions.Caching.Abstractions.dll
+C:\Users\Admin\source\repos\ProgrammingL1\ReserverApi\ReserverApi\bin\Debug\net9.0\Microsoft.Extensions.Caching.Memory.dll
+C:\Users\Admin\source\repos\ProgrammingL1\ReserverApi\ReserverApi\bin\Debug\net9.0\Microsoft.Extensions.DependencyInjection.dll
+C:\Users\Admin\source\repos\ProgrammingL1\ReserverApi\ReserverApi\bin\Debug\net9.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+C:\Users\Admin\source\repos\ProgrammingL1\ReserverApi\ReserverApi\bin\Debug\net9.0\Microsoft.Extensions.Logging.dll
+C:\Users\Admin\source\repos\ProgrammingL1\ReserverApi\ReserverApi\bin\Debug\net9.0\Microsoft.Extensions.Logging.Abstractions.dll
+C:\Users\Admin\source\repos\ProgrammingL1\ReserverApi\ReserverApi\bin\Debug\net9.0\Microsoft.Extensions.Options.dll
+C:\Users\Admin\source\repos\ProgrammingL1\ReserverApi\ReserverApi\bin\Debug\net9.0\Microsoft.Extensions.Primitives.dll
