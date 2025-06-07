@@ -1,0 +1,12 @@
+{
+  "Version": 1,
+  "Hash": "L23DT4cKFzw5BrRuPvKEmgB0vuCCaLpGmdzcjNdGMls=",
+  "Source": "ReserverApi",
+  "BasePath": "_content/ReserverApi",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": [],
+  "Endpoints": []
+}

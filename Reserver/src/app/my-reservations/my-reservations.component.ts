@@ -1,11 +1,35 @@
 import { Component } from '@angular/core';
+import { MyReservationsService } from '../my-reservations.service';
+import { DatePipe } from '@angular/common';
 
 @Component({
   selector: 'app-my-reservations',
-  imports: [],
+  imports: [DatePipe],
   templateUrl: './my-reservations.component.html',
-  styleUrl: './my-reservations.component.css'
+  styleUrls: ['./my-reservations.component.css']
 })
 export class MyReservationsComponent {
+  myReservations: any[] = [];
 
+  ngOnInit() {
+    this.getReservations();
+  }
+
+  cancelReservation(reservation: any): any {
+    this.myReservationsService
+      .cancelReservation(reservation)
+      .subscribe({
+        next: () => this.getReservations()
+      });
+  }
+
+  getReservations(): any {
+    this.myReservationsService
+      .getMyReservations()
+      .subscribe({
+        next: reservations => this.myReservations = reservations
+      });
+  }
+
+  constructor(private myReservationsService: MyReservationsService) { }
 }

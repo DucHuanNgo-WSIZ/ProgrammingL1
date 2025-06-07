@@ -1,1 +1,20 @@
-<p>my-reservations works!</p>
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th scope="col">#</th>
+            <th scope="col">Seat</th>
+            <th scope="col"></th>
+        </tr>
+    </thead>
+    <tbody>
+        @for (reservation of myReservations; track reservation.name; let i = $index) {
+        <tr>
+            <th scope="row">{{ i + 1 }}</th>
+            <td>
+                {{ reservation.id }}
+            </td>
+            <td><button class="btn btn-danger" (click)="cancelReservation(reservation)">Cancel</button></td>
+        </tr>
+        }
+    </tbody>
+</table>
