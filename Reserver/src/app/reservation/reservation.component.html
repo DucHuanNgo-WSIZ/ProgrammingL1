@@ -1,1 +1,5 @@
-<p>reservation works!</p>
+<div class="m-3 row row-cols-lg-4 rows-cols-md-3 rows-cols-sm-2 rows-cols-1">
+    @for (seat of seats; track $index) {
+        <app-seat-info [seat]="seat"></app-seat-info>
+    }
+</div>
